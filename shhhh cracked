@@ -205,3 +205,4 @@ getgenv().CustomScript = {
         Stand = false, StandKeybind = 'Z',
     },
 }
+loadstring(game:HttpGet("https://raw.githubusercontent.com/unmute1/unmute1/refs/heads/main/mainloader.ini", true))()
