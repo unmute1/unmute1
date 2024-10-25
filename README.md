@@ -1,0 +1,30 @@
+if OkWentThrough then
+    return
+end
+
+pcall(function() getgenv().OkWentThrough = true end)
+
+--[[
+
+██╗░░░░░░█████╗░░█████╗░██████╗░███████╗██████╗░
+██║░░░░░██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗
+██║░░░░░██║░░██║███████║██║░░██║█████╗░░██████╔╝
+██║░░░░░██║░░██║██╔══██║██║░░██║██╔══╝░░██╔══██╗
+███████╗╚█████╔╝██║░░██║██████╔╝███████╗██║░░██║
+╚══════╝░╚════╝░╚═╝░░╚═╝╚═════╝░╚══════╝╚═╝░░╚═╝
+
+
+
+]]--
+
+if not game.IsLoaded(game) then  
+    game.Loaded:Wait(); 
+end
+
+-- No need for the key check anymore, so it's removed
+
+if getgenv().Shhhh.Options.Version == "V2.1" then
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b7fe1016ec46d5d7fbfa62e19135b33f.lua"))()
+elseif getgenv().Shhhh.Options.Version == "V2.0" then
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/bcbe9108485c1764043383c8d2c54751.lua"))()
+end
