@@ -1,4 +1,4 @@
-getgenv().CustomScript = {
+getgenv().Lone = {
     ['Options'] = {
         Version = 'V2.0', -- [ V2.1 has the best resolver in the game ) ( V2.0 hits the most and still has a good resolver ( recommended ) ]
         Intro = false, -- [ stars an intro ]
