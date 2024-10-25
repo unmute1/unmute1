@@ -1,1 +1,207 @@
-
+getgenv().CustomScript = {
+    ['Options'] = {
+        Version = 'V2.0', -- [ V2.1 has the best resolver in the game ) ( V2.0 hits the most and still has a good resolver ( recommended ) ]
+        Intro = false, -- [ stars an intro ]
+        ['UnlockFps'] = {
+            Enabled = true, -- [ basically fps unlocker ]
+            FpsCap = 999,
+        },
+        ['CustomTextures'] = {
+            Enabled = false, -- [ to have textures like ForceField world etc ]
+            Texture = 'ForceField',
+            Color = Color3.fromRGB(255, 198, 254),
+            ['Fog'] = {
+                Enabled = false,
+                Start = 0,
+                End = 1000,
+                Color = BrickColor.new("Light reddish violet"),
+            },
+        },
+    },
+    ['Panic'] = {
+        Enabled = true,
+        Key = 'K', -- // turns everything OFF/ON
+    },
+    ['Universal'] = {
+      Enabled = false, -- // turn this off if you're gonna play DA HOOD
+      TeamCheck = true, -- // turn this off if the game is free for all
+      VisibleCheck = true,
+      Use_HitChance = true,
+      Visible = true, --  // Visible / Show Fov
+      Predict = false,
+      Prediction = 0.115,
+      Size = 150, -- // Fov Size
+      HitChance = 100,
+      HitPart = 'Random', -- // Head, HumanoidRootPart, Random
+    },
+    ['Silent'] = {
+        Enabled = true,
+        Mode = 'FOV', -- // FOV or Target
+        Enable_KeyBind = true,
+        KeyBind = 'p',
+        Notification = true,
+        Predict = true,
+        Prediction = 0.135,
+        HitChance = 300,
+        AirShot_HitChance = 300,
+        HitParts = 'HumanoidRootPart',
+        NearestCursorHitpart = true,
+        HitPart_Mode = 'Nearest Point', -- 'Nearest Part', 'Nearest Point'
+    },
+    ['AimAssist'] = {
+        Enabled = true,
+        Hold_KeyBind = false,
+        Mode = 'KeyBind', -- // 'KeyBind' or 'Mouse' or 'Auto', ('Auto' will auto lock on target once they are in aimassist fov)
+        KeyBind = 'q',
+        MouseBind = Enum.UserInputType.MouseButton2,
+        ThirdPerson = true,
+        FirstPerson = true,
+        Predict = true,
+        Prediction = 0.115,
+        Smooth = true,
+        SmoothValue = 0.014,
+        AirShot_SmoothValue = 0.050,
+        HitPart = 'HumanoidRootPart',
+        Use_AirShotHitPart = false,
+        AirShotHitPart = 'Head',
+        NearestCursorHitpart = true,
+        UnLockWhenTyping = false,
+        UnlockWhenReloading = false,
+        UnlockWhenNotHoldingGun = false,
+        ['EasingStyle'] = {
+            First = 'Elastic',
+            Second = 'Sine',
+        },
+        ['FrameSkip'] = {
+            Enabled = false,
+            UseKeyBind = true,
+            Notification = false,
+            ToggleKeyBind = 'g', -- [ to turn the frameskip on / off ]
+        },
+    },
+    ['Shake'] = {
+        Enabled = false,
+        X = 5,
+        Y = 5,
+        Z = 5,
+        AirShot = false,
+        Airshot___X = 5,
+        Airshot___Y = 5,
+        Airshot___Z = 5,
+    },
+    ['Fov'] = {
+        ['Silent'] = {
+            Visible = true, -- circle visible
+            Filled = false,
+            Size = 35,
+            Transparency = 0.14,
+            Thickness = 1,
+            Shape = 'Circle',
+            Set = {0, 0},
+            Color = Color3.fromRGB(0, 0, 0),
+        },
+        ['AimAssist'] = {
+            Visible = false, -- circle visible
+            Use_Fov = false,
+            Disable_Outside_Fov = false,
+            Filled = false,
+            Size = 50,
+            Transparency = 1,
+            Thickness = 1,
+            Shape = 'Circle',
+            Set = {0, 0},
+            Color = Color3.fromRGB(0, 0, 0),
+        },
+    },
+    ['Checks'] = {
+        Wall = true,
+        Knocked = true,
+        Grabbed = true,
+        Airshot = true,
+        Crew_Check = false,
+        NoGroundShots = true,
+    },
+    ['Resolver'] = {
+        Enabled = true,
+        Anti_Aim_Viewer = true,
+    },
+    ['Misc'] = {
+        ['Auto360'] = {
+            Enabled = false,
+            SpinKeybind = 'Q',
+            SpinSpeed = 1,
+        },
+        ['CloseGame'] = {
+            Enabled = false,
+            CloseGameKeybind = 'M',
+            UseDelay = true,
+            Delay = 1,
+        },
+        ['FakeSpike'] = {
+            Enabled = false,
+            FakeSpikeKeybind = 'K',
+            SpikeDuration = 1,
+        },
+        ['AutoReset'] = {
+            Enabled = false,
+            AutoResetKeybind = 'L',
+            UseDelay = true,
+            Delay = 1,
+        },
+        ['Settings'] = {
+            AutoLowGFX = false,
+            MuteBoomBox = false,
+            AutoReload = false,
+        },
+        ['CheckSnipers'] = {
+            Enabled = true,
+            Notification = true,
+            CloseGame = false,
+                ['Usernames'] = { 
+                    'imlovinit212',
+                    'username2',
+                    'username3',
+                    'username4',
+                    'username5',
+                    'username6',
+                },
+        },
+        ['TrashTalk'] = {
+            Enabled = true,
+            KeyBind = "t",
+            Method = "2",
+            Delay = 0.3,
+                ['Messages'] = {
+                    'terrible',
+                    'message',
+                    'message',
+                    'message',
+                    'message',
+                    'message',
+                },
+        },
+    },
+    ['TriggerBot'] = {
+        Enabled = false,
+        Notification = false,
+        Use_KeyBind = true,
+        Mode = "KeyBind",
+        KeyBind = Enum.KeyCode.M,
+        Delay = 0.1,
+    },
+    ['Rejoin'] = {
+        Enabled = false,
+        Keybind = 'Q',
+    },
+    ['Noclip_Macro'] = {
+        Enabled = false,
+        KeyBind = Enum.KeyCode.H,
+        First_Gun = '[Shotgun]',
+        Second_Gun = '[TacticalShotgun]',
+    },
+    ['Animation'] = {
+        Lay = false, LayKeybind = 'C',
+        Ragdoll = false, RagdollKeybind = 'X',
+        Stand = false, StandKeybind = 'Z',
+    },
+}
